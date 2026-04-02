@@ -27,15 +27,19 @@ namespace tgrad
 
         // constructor defaults to cpu
         Device() : type(DeviceType::CPU), index(0) {}
-        Device(const DeviceType t, const int32_t idx = 0) : type(t), index(idx){}
+        explicit Device(const DeviceType t, const int32_t idx = 0) : type(t), index(idx){}
 
         // Factory methods for creating tensors eg Tensor::zeros({1,1})
         static Device cpu()  { return Device(DeviceType::CPU);  }
         static Device cuda() { return Device(DeviceType::CUDA); }
 
+        [[nodiscard]]
         bool is_cuda()   const { return type == DeviceType::CUDA;   }
+        [[nodiscard]]
         bool is_cpu()    const { return type == DeviceType::CPU;    }
+        [[nodiscard]]
         bool is_metal()  const { return type == DeviceType::METAL;  }
+        [[nodiscard]]
         bool is_opencl() const { return type == DeviceType::OPENCL; }
 
         // operator overloading to check if devices are same
@@ -44,6 +48,7 @@ namespace tgrad
             return type == other.type && index == other.index;
         }
 
+        [[nodiscard]]
         std::string str() const; // returns string like cpu, cuda:0
 
     };
