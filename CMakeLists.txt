@@ -11,7 +11,7 @@ set(CMAKE_CXX_EXTENSIONS OFF) # disables compiler specific extensions; keeps cod
 add_library(tgrad
         src/dtype.cpp
         src/device.cpp
-        # here cpp files will go !
+        src/storage.cpp
 )
 
 # define where header file lives
@@ -24,5 +24,5 @@ target_include_directories(tgrad PUBLIC
 #target_link_libraries(test_tensor PRIVATE tgrad)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    target_compile_options(tgrad PRIVATE -Wall -Wextra -Wpedantic)
+    target_compile_options(tgrad PRIVATE -Wall -Wextra -Wpedantic -O3)
 endif ()
