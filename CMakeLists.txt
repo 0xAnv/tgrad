@@ -12,6 +12,7 @@ add_library(tgrad
         src/dtype.cpp
         src/device.cpp
         src/storage.cpp
+        src/shape.cpp
 )
 
 # define where header file lives
