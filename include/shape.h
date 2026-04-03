@@ -25,4 +25,5 @@ namespace tgrad {
     bool is_contiguous(const Shape& shape, const Strides& strides);
 }
 
+
 #endif //TGRAD_SHAPE_H

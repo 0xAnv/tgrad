@@ -67,3 +67,4 @@ namespace tgrad {
         return expected == strides;
     }
 }
+

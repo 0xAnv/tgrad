@@ -13,6 +13,7 @@ add_library(tgrad
         src/device.cpp
         src/storage.cpp
         src/shape.cpp
+        src/tensor.cpp
 )
 
 # define where header file lives
