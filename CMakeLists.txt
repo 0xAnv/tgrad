@@ -22,8 +22,8 @@ target_include_directories(tgrad PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
-#add_executable(test_tensor tests/unit/test_tensor.cpp)
-#target_link_libraries(test_tensor PRIVATE tgrad)
+add_executable(test_tensor tests/unit/test_tensor.cpp)
+target_link_libraries(test_tensor PRIVATE tgrad)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_compile_options(tgrad PRIVATE -Wall -Wextra -Wpedantic -O3)

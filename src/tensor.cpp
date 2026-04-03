@@ -59,7 +59,7 @@ namespace tgrad {
         return t;
     }
 
-    // Add random supp
+    // Add random support here.
     Tensor Tensor::randn(Shape shape, DType dtype, Device device) {
         throw std::runtime_error("randn() not implemented");
     }
