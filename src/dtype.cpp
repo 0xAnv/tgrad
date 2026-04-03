@@ -5,8 +5,7 @@
 #include "dtype.h"
 #include <stdexcept>
 
-namespace tgrad
-{
+namespace tgrad {
     size_t dtype_size(const DType dtype) {
         switch (dtype) {
         case DType::Float32: return 4; // 32 bts = 4 bytes

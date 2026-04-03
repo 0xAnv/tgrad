@@ -9,8 +9,7 @@
 #ifndef TGRAD_DTYPE_H
 #define TGRAD_DTYPE_H
 
-namespace tgrad
-{
+namespace tgrad {
     enum class DType : uint8_t {
         Float32, // standard 32 bit format
         Float16, // 16 bit format (half precision)

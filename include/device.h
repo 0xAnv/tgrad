@@ -9,8 +9,7 @@
 #ifndef TGRAD_DEVICE_H
 #define TGRAD_DEVICE_H
 
-namespace tgrad
-{
+namespace tgrad {
     // types of hardware
     enum class DeviceType : uint8_t {
         CPU, // AVX etc

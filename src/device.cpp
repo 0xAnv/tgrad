@@ -4,8 +4,7 @@
 #include "device.h"
 #include <stdexcept>
 
-namespace tgrad
-{
+namespace tgrad {
     // returns nice string of device
     std::string Device::str() const {
         switch (type) {
