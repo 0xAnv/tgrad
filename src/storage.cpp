@@ -34,7 +34,7 @@ namespace tgrad {
     Storage::from_data(const void* data, const size_t num_bytes, const DType dtype) {
         // create mem and fill it with exisiting data
         std::shared_ptr<Storage> storage = allocate(num_bytes, Device::cpu(), dtype);
-        std::memcmp(storage->data_ptr(), data, num_bytes);
+        std::memcpy(storage->data_ptr(), data, num_bytes);
         return storage;
     }
 
