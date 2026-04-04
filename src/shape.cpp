@@ -53,7 +53,7 @@ namespace tgrad {
             SizeType dim_a = (i >= 0) ? a[i] : 1;
             SizeType dim_b = (j >= 0) ? b[j] : 1;
 
-            result[k] = std::max(dim_a, dim_a);
+            result[k] = std::max(dim_a, dim_b);
             i--;
             j--;
             k--;

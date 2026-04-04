@@ -28,7 +28,8 @@ namespace tgrad {
         // computing strides
         const Strides strides = compute_contiguous_strides(shape);
         // build and reurn tensor
-        Tensor t(storage, shape, strides, requires_grad);
+        Tensor t(storage, shape, strides);
+        t.set_requires_grad(requires_grad);
         return t;
     }
 
